@@ -1,3 +1,10 @@
+**Dijkstra's algorithm**
+O algoritmo de Dijkstra é um algoritmo para encontrar os caminhos mais curtos entre nós em um grafo ponderado, que pode representar, por exemplo, redes rodoviárias. Foi concebido pelo cientista da computação Edsger W. Dijkstra.
+https://g.co/kgs/vW1FNn
+
+
+![Dijkstra_Animation](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/36688038/eb8e7e64-e994-482f-beb3-c311489e2e6d)
+
 **Exemplo de Implementação do Algoritmo de Dijkstra em Python**
 
 Neste arquivo, você encontrará um exemplo completo da implementação do algoritmo de Dijkstra em Python. Vamos abordar passo a passo a implementação do algoritmo, além de fornecer uma explicação detalhada para cada parte do código. O algoritmo de Dijkstra é usado para encontrar o caminho mais curto entre dois pontos em um grafo ponderado. 
