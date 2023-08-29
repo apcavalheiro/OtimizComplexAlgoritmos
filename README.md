@@ -6,4 +6,5 @@ A disciplina terá sua base no livro: "The Algorithm Design Manual" de Steven S.
 
 As atividades a serem entregues serão referentes aos capitulos do livro.
 
-Participantes: Adriano Prado Cavalheiro; Chrystian Jheimes dos Santos
+Participantes: Adriano Prado Cavalheiro;
+               Chrystian Jheimes dos Santos.
