@@ -51,16 +51,26 @@ Uma regra básica na análise Big Oh é que o tempo de execução do pior caso d
 A correspondência de padrões é a operação algorítmica mais fundamental em strings de texto. 
 Este algoritmo implementa o comando find disponível em qualquer navegador web ou editor de texto:
 
-Problema: correspondência de padrões de substring
-Entrada: Uma string de texto t e uma string de padrão p.
-Saída: t contém o padrão p como uma substring e, em caso afirmativo, onde? Talvez você esteja interessado em descobrir onde “Skiena” aparece em um determinado artigo de notícias (bem, eu estaria interessado em tal coisa). 
+**Problema:**
+Correspondência de padrões de substring.
+
+**Entrada:**
+Uma string de texto t e uma string de padrão p.
+
+**Saída:**
+t contém o padrão p como uma substring e, em caso afirmativo, onde? Talvez você esteja interessado em descobrir onde “Skiena” aparece em um determinado artigo de notícias (bem, eu estaria interessado em tal coisa). 
 Esta é uma instância de correspondência de padrões de string com t como o artigo de notícias e p= "Skiena".
 As somas aninhadas geralmente surgem na análise de algoritmos com loops aninhados. 
 Considere o problema da multiplicação de matrizes:
 
-Problema: Multiplicação de Matrizes
-Entrada: Duas matrizes, A (de dimensão x × y) e B (dimensão y × z).
-Saída: Uma matriz x × z C onde C[i][j] é o produto escalar da iésima linha de A e da jésima coluna de B.
+**Problema:**
+Multiplicação de Matrizes.
+
+**Entrada:**
+Duas matrizes, A (de dimensão x × y) e B (dimensão y × z).
+
+**Saída:**
+Uma matriz x × z C onde C[i][j] é o produto escalar da iésima linha de A e da jésima coluna de B.
 Logaritmo é um anagrama de algoritmo, mas não é por isso que precisamos saber o que são logaritmos. 
 Você viu o botão em sua calculadora, mas pode ter esquecido por que ele está lá. 
 Um logaritmo é simplesmente uma função exponencial inversa. 
@@ -118,22 +128,22 @@ Isso segue porque:
 
 **Testando Compreensão:**
 
-Questão 1: Qual é a importância da análise de algoritmos e por que os engenheiros de software devem se preocupar com ela?
+**Questão 1:** Qual é a importância da análise de algoritmos e por que os engenheiros de software devem se preocupar com ela?
 
-Resposta 1: A análise de algoritmos é crucial para entender o desempenho e a eficiência de diferentes abordagens na resolução de problemas. Ela permite aos engenheiros de software escolher a melhor estratégia para otimizar o tempo de execução e o uso de recursos, considerando cenários de entrada variados.
+**Resposta 1:** A análise de algoritmos é crucial para entender o desempenho e a eficiência de diferentes abordagens na resolução de problemas. Ela permite aos engenheiros de software escolher a melhor estratégia para otimizar o tempo de execução e o uso de recursos, considerando cenários de entrada variados.
 
-Questão 2: O que é a notação Big O (O-grande) e para que ela é usada na análise de algoritmos?
+**Questão 2:** O que é a notação Big O (O-grande) e para que ela é usada na análise de algoritmos?
 
-Resposta 2: A notação Big O é usada para descrever a complexidade assintótica de algoritmos. Ela estima como o tempo de execução e os recursos aumentam em relação ao tamanho dos dados de entrada. A notação Big O ajuda a comparar algoritmos sem se preocupar com detalhes de implementação ou constantes.
+**Resposta 2:** A notação Big O é usada para descrever a complexidade assintótica de algoritmos. Ela estima como o tempo de execução e os recursos aumentam em relação ao tamanho dos dados de entrada. A notação Big O ajuda a comparar algoritmos sem se preocupar com detalhes de implementação ou constantes.
 
-Questão 3: Quais são as outras notações de complexidade além de Big O e qual é a diferença entre elas?
+**Questão 3:** Quais são as outras notações de complexidade além de Big O e qual é a diferença entre elas?
 
-Resposta 3: Além de Big O, existem as notações Big Omega (Ω) e Big Theta (Θ). Big Omega representa o limite inferior da complexidade de um algoritmo, enquanto Big Theta representa um limite superior e inferior iguais. Enquanto Big O fornece uma estimativa superior do desempenho, Big Omega e Big Theta consideram limites inferiores e médios.
+**Resposta 3:** Além de Big O, existem as notações Big Omega (Ω) e Big Theta (Θ). Big Omega representa o limite inferior da complexidade de um algoritmo, enquanto Big Theta representa um limite superior e inferior iguais. Enquanto Big O fornece uma estimativa superior do desempenho, Big Omega e Big Theta consideram limites inferiores e médios.
 
-Questão 4: Como a análise de tempo e espaço dos algoritmos é realizada?
+**Questão 4:** Como a análise de tempo e espaço dos algoritmos é realizada?
 
-Resposta 4: A análise de tempo envolve a contagem de operações elementares executadas pelo algoritmo, considerando o pior caso. A análise de espaço mede a quantidade de memória necessária para executar o algoritmo. A complexidade de tempo e espaço é geralmente expressa em notação Big O.
+**Resposta 4:** A análise de tempo envolve a contagem de operações elementares executadas pelo algoritmo, considerando o pior caso. A análise de espaço mede a quantidade de memória necessária para executar o algoritmo. A complexidade de tempo e espaço é geralmente expressa em notação Big O.
 
-Questão 5: Por que a análise experimental de algoritmos é importante e como ela é realizada?
+**Questão 5:** Por que a análise experimental de algoritmos é importante e como ela é realizada?
 
-Resposta 5: A análise experimental valida as conclusões teóricas sobre o desempenho dos algoritmos. Ela envolve a execução dos algoritmos em cenários reais e a medição do tempo de execução e uso de recursos. Experimentos controlados são projetados para explorar diferentes cenários e validar as análises teóricas.
+**Resposta 5:** A análise experimental valida as conclusões teóricas sobre o desempenho dos algoritmos. Ela envolve a execução dos algoritmos em cenários reais e a medição do tempo de execução e uso de recursos. Experimentos controlados são projetados para explorar diferentes cenários e validar as análises teóricas.
