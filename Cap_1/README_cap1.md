@@ -1,5 +1,5 @@
 # Atividade 1 enunciado:
-Entregar algum objetos de aprendizagem elaborado individualmente ou em grupo de até 3 alunos sobre o capítulo 1. O material deve ser inédito e ajudar na compreensão do conteúdo. Exemplos incluem resumos, audio, video, apresentação, esquema, infográfico, exercícios (com gabarito), repositório de código, objetos de aprendizagem. Os materiais serão compartilhados com a turma para que todos tenham a oportunidade de melhorar o próprio entendimento sobre o conteúdo.
+Entregar algum objetos de aprendizagem elaborado individualmente ou em grupo de até 3 alunos sobre o capítulo 1. O material deve ser inédito e ajudar na compreensão do conteúdo. Exemplos incluem resumos, áudio, vídeo, apresentação, esquema, infográfico, exercícios (com gabarito), repositório de código, objetos de aprendizagem. Os materiais serão compartilhados com a turma para que todos tenham a oportunidade de melhorar o próprio entendimento sobre o conteúdo.
 
 **Resumo capítulo 1: Introduction to Algorithm Design**
 
