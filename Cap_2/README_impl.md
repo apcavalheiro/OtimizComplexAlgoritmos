@@ -51,18 +51,18 @@
    ```
    - Aqui, a função `measure_execution_time` é chamada para medir o tempo de execução dos algoritmos `bubble_sort` e `quick_sort` na lista de números desordenados. O tempo é formatado com 5 casas decimais e impresso.
 
-7. **Executar o Código:**
+7. **Executar o Código**:
 Abra seu terminal, navegue até o diretório onde o arquivo dijkstra_algorithm.py está localizado e execute o código com o comando:
 python algorithms.py
 
 Em resumo, o código realiza a medição do tempo de execução dos algoritmos de ordenação Bubble Sort e Quick Sort usando a função `measure_execution_time`. Isso permite comparar o tempo que cada algoritmo leva para ordenar a mesma lista de números desordenados.
 
-**Notação Big O**
+**Notação Big O**:
 A notação Big O é usada para descrever a complexidade assintótica de um algoritmo, ou seja, como seu desempenho se comporta em relação ao tamanho dos dados de entrada. Vamos analisar como a notação Big O se aplica ao código.
 
 Primeiro, vamos olhar para os dois algoritmos de ordenação, Bubble Sort e Quick Sort:
 
-**Bubble Sort:**
+**Bubble Sort**:
 
 No pior caso, o Bubble Sort percorre a lista várias vezes, comparando e trocando elementos.
 A complexidade no pior caso é O(n^2), onde 'n' é o número de elementos na lista.
