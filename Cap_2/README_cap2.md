@@ -17,7 +17,7 @@ Podemos definir três funções interessantes sobre o gráfico desses pontos:
 As complexidades de tempo de melhor, pior e caso médio para qualquer algoritmo são funções numéricas sobre o tamanho de possíveis instâncias do problema. No entanto, é muito difícil trabalhar precisamente com essas funções, pois elas tendem a:	Ter muitos solavancos – Um algoritmo como busca binária normalmente roda um pouco mais rápido para arrays de tamanho exatamente n = 2^k-1 (onde k é um inteiro), porque as partições de array funcionam bem. 
 Esse detalhe não é particularmente significativo, mas nos adverte que a função de complexidade de tempo exata para qualquer algoritmo pode ser muito complicada, com pequenos saltos para cima e para baixo.
 	Exigir muitos detalhes para especificar com precisão – Contar o número exato de instruções de RAM executadas no pior caso exige que o algoritmo seja especificado com detalhes de um programa de computador completo. 
-Além disso, a resposta precisa depende de detalhes de codificação desinteressantes (por exemplo, ele usou uma instrução case ou ifs aninhados?). Realizar uma análise precisa do pior caso, como
+Além disso, a resposta precisa depender de detalhes de codificação desinteressantes (por exemplo, ele usou uma instrução case ou ifs aninhados?). Realizar uma análise precisa do pior caso, como
 
         T(n) = 12754n² + 4353n + 834〖lg〗_2 n+13546
 
@@ -25,15 +25,11 @@ seria claramente um trabalho muito difícil, mas nos fornece poucas informaçõe
         As definições formais associadas à notação Big Oh são as seguintes:
 
 	f(n) = O(g(n)) significa que c ⋅ g(n) é um limite superior em f(n). 
-Assim, existe alguma constante c tal que f(n) é sempre ≤ c ⋅ g(n), para n suficientemente grande (ou seja, n ≥ n^0 para alguma constante n^0).
-	f(n) = Ω(g(n)) significa que c ⋅ g(n) é um limite inferior em f(n).  
-Assim existe alguma constante c tal que f(n) é sempre ≥ c ⋅ g(n), para todo n ≥ n^0.
+Assim, existe alguma constante c tal que f(n) é sempre ≤ c ⋅ g(n), para n suficientemente grande (ou seja, n ≥ n^0 para alguma constante n^0).	f(n) = Ω(g(n)) significa que c ⋅ g(n) é um limite inferior em f(n). Assim existe alguma constante c tal que f(n) é sempre ≥ c ⋅ g(n), para todo n ≥ n^0.
 	f(n) = Θ(g(n)) significa que c_1  ⋅ g(n) é um limite superior em f(n) e c_2 · g(n) é um limite inferior em f(n), para todo n ≥ n^0. 
-Assim existem constantes c_1   e c_2 tais que f(n) ≤ c_1  ⋅ g(n) e  f(n) ≤ c_2  ⋅ g(n). 
-Isso significa que g(n) fornece um bom e apertado limite em f(n).
+Assim existem constantes c_1   e c_2 tais que f(n) ≤ c_1  ⋅ g(n) e  f(n) ≤ c_2  ⋅ g(n). Isso significa que g(n) fornece um bom e apertado limite em f(n).
         A notação Big Oh agrupa funções em um conjunto de classes, de modo que todas as funções em uma determinada classe sejam equivalentes em relação ao Big Oh. 
-        A boa notícia é que apenas algumas classes de função tendem a ocorrer no decorrer da análise de algoritmos básicos. 
-	Eles são suficientes para cobrir quase todos os algoritmos que discutiremos neste texto e estão listados em ordem crescente de dominância:
+	A boa notícia é que apenas algumas classes de função tendem a ocorrer no decorrer da análise de algoritmos básicos. Eles são suficientes para cobrir quase todos os algoritmos que discutiremos neste texto e estão listados em ordem crescente de dominância:	
 	Funções constantes, f(n)=1 – Tais funções podem medir o custo de adicionar dois números, imprimir “The Star Spangled Banner”, ou o crescimento realizado por funções como f(n) = min(n,100). 
 No quadro geral, não há dependência do parâmetro n.
 	Funções logarítmicas, f(n)=log n – A complexidade de tempo logarítmica aparece em algoritmos como busca binária. 
