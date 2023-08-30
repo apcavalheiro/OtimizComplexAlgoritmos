@@ -62,11 +62,11 @@ A notação Big O é usada para descrever a complexidade assintótica de um algo
 
 Primeiro, vamos olhar para os dois algoritmos de ordenação, Bubble Sort e Quick Sort:
 
-Bubble Sort:
+**Bubble Sort:**
 
 No pior caso, o Bubble Sort percorre a lista várias vezes, comparando e trocando elementos.
 A complexidade no pior caso é O(n^2), onde 'n' é o número de elementos na lista.
-Quick Sort:
+**Quick Sort:**
 
 O Quick Sort divide a lista em partes menores com base em um pivô.
 No pior caso, pode fazer 'n' divisões, mas cada divisão leva menos tempo.
