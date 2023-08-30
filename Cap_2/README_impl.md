@@ -66,6 +66,7 @@ Primeiro, vamos olhar para os dois algoritmos de ordenação, Bubble Sort e Quic
 
 No pior caso, o Bubble Sort percorre a lista várias vezes, comparando e trocando elementos.
 A complexidade no pior caso é O(n^2), onde 'n' é o número de elementos na lista.
+
 **Quick Sort:**
 
 O Quick Sort divide a lista em partes menores com base em um pivô.
