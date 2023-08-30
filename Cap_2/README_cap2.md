@@ -22,13 +22,13 @@ Além disso, a resposta precisa depender de detalhes de codificação desinteres
         T(n) = 12754n² + 4353n + 834〖lg〗_2 n+13546
 
 seria claramente um trabalho muito difícil, mas nos fornece poucas informações extras do que a observação de que “o tempo cresce quadraticamente com n”.
-        As definições formais associadas à notação Big Oh são as seguintes:
+        As definições formais associadas à notação Big O são as seguintes:
 
 	f(n) = O(g(n)) significa que c ⋅ g(n) é um limite superior em f(n). 
 Assim, existe alguma constante c tal que f(n) é sempre ≤ c ⋅ g(n), para n suficientemente grande (ou seja, n ≥ n^0 para alguma constante n^0).	f(n) = Ω(g(n)) significa que c ⋅ g(n) é um limite inferior em f(n). Assim existe alguma constante c tal que f(n) é sempre ≥ c ⋅ g(n), para todo n ≥ n^0.
 	f(n) = Θ(g(n)) significa que c_1  ⋅ g(n) é um limite superior em f(n) e c_2 · g(n) é um limite inferior em f(n), para todo n ≥ n^0. 
 Assim existem constantes c_1   e c_2 tais que f(n) ≤ c_1  ⋅ g(n) e  f(n) ≤ c_2  ⋅ g(n). Isso significa que g(n) fornece um bom e apertado limite em f(n).
-        A notação Big Oh agrupa funções em um conjunto de classes, de modo que todas as funções em uma determinada classe sejam equivalentes em relação ao Big Oh. 
+        A notação Big O agrupa funções em um conjunto de classes, de modo que todas as funções em uma determinada classe sejam equivalentes em relação ao Big O. 
 	A boa notícia é que apenas algumas classes de função tendem a ocorrer no decorrer da análise de algoritmos básicos. Eles são suficientes para cobrir quase todos os algoritmos que discutiremos neste texto e estão listados em ordem crescente de dominância:	
 	Funções constantes, f(n)=1 – Tais funções podem medir o custo de adicionar dois números, imprimir “The Star Spangled Banner”, ou o crescimento realizado por funções como f(n) = min(n,100). 
 No quadro geral, não há dependência do parâmetro n.
@@ -45,9 +45,9 @@ Como vimos, os algoritmos exponenciais tornam-se inúteis rapidamente, mas não 
 	Funções fatoriais, f(n)=n! – Funções como n! surgem ao gerar todas as permutações ou ordenações de n itens.
 A multiplicação é como a adição repetida. 
 Considere a multiplicação por qualquer constante c > 0, seja 1,02 ou 1.000.000. 
-Multiplicar uma função por uma constante não pode afetar seu comportamento assintótico, porque podemos multiplicar as constantes limitantes na análise Big Oh de c · f(n) por 1/c para fornecer constantes apropriadas para a análise Big Oh de f(n) .
+Multiplicar uma função por uma constante não pode afetar seu comportamento assintótico, porque podemos multiplicar as constantes limitantes na análise Big O de c · f(n) por 1/c para fornecer constantes apropriadas para a análise Big O de f(n) .
 O raciocínio grosseiro sobre o tempo de execução de um algoritmo geralmente é fácil, dada uma descrição escrita precisa do algoritmo. Nesta seção, trabalharei com vários exemplos, talvez com mais detalhes do que o necessário.
-Uma regra básica na análise Big Oh é que o tempo de execução do pior caso decorre da multiplicação do maior número de vezes que cada loop aninhado pode iterar.
+Uma regra básica na análise Big O é que o tempo de execução do pior caso decorre da multiplicação do maior número de vezes que cada loop aninhado pode iterar.
 A correspondência de padrões é a operação algorítmica mais fundamental em strings de texto. 
 Este algoritmo implementa o comando find disponível em qualquer navegador web ou editor de texto:
 
@@ -119,7 +119,7 @@ A base do logaritmo não tem impacto real na taxa de crescimento - Compare os tr
        
 Uma grande mudança na base do logaritmo produz pouca diferença no valor do logaritmo. 
 Mudar a base do logaritmo de a para c envolve dividir por 〖log〗_c a. 
-Este fator de conversão é perdido para a notação Big Oh sempre que a e c são constantes. 
+Este fator de conversão é perdido para a notação Big O sempre que a e c são constantes. 
 Assim, geralmente temos justificativa para ignorar a base do logaritmo ao analisar algoritmos.
 Os logaritmos reduzem qualquer função ao tamanho – A taxa de crescimento do logaritmo de qualquer função polinomial é O(lg n).
 Isso segue porque: 
