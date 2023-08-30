@@ -1,6 +1,6 @@
-**Dijkstra's algorithm**
+**Dijkstra's algorithm:**
 O algoritmo de Dijkstra é um algoritmo para encontrar os caminhos mais curtos entre nós em um grafo ponderado, que pode representar, por exemplo, redes rodoviárias. Foi concebido pelo cientista da computação Edsger W. Dijkstra.
-https://g.co/kgs/vW1FNn
+Link: https://g.co/kgs/vW1FNn
 
 
 ![Dijkstra_Animation](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/36688038/eb8e7e64-e994-482f-beb3-c311489e2e6d)
