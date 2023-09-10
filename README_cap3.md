@@ -16,7 +16,7 @@ Ponteiros e estruturas vinculadas
 Ponteiros são as conexões que mantêm unidas as peças das estruturas vinculadas. Os ponteiros representam o endereço de um local na memória.
 A lista é a estrutura vinculada mais simples. As três operações básicas suportadas pelas listas são pesquisa, inserção e exclusão. Nas listas duplamente vinculadas, cada nó aponta tanto para seu antecessor quanto para seu elemento sucessor.
 
-```
+```python
    lista *lista_pesquisa(lista *l, tipo_item x) {
            if (l == NULO) return(NULO);
            if (l->item == x) return(l);
