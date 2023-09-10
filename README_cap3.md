@@ -16,22 +16,27 @@ Ponteiros e estruturas vinculadas
 Ponteiros são as conexões que mantêm unidas as peças das estruturas vinculadas. Os ponteiros representam o endereço de um local na memória.
 A lista é a estrutura vinculada mais simples. As três operações básicas suportadas pelas listas são pesquisa, inserção e exclusão. Nas listas duplamente vinculadas, cada nó aponta tanto para seu antecessor quanto para seu elemento sucessor.
 
-lista *lista_pesquisa(lista *l, tipo_item x) {
-if (l == NULO) return(NULO);
-if (l->item == x) return(l);
-return(lista_pesquisa(l->próximo, x));
+```
+   lista *lista_pesquisa(lista *l, tipo_item x) {
+           if (l == NULO) return(NULO);
+           if (l->item == x) return(l);
+           return(lista_pesquisa(l->próximo, x));
 }
+   ```
 
 A inserção em uma lista vinculada individualmente é um bom exercício de manipulação de ponteiros, conforme mostrado abaixo.
 
+```
 void insert_list(lista **l, item_type x) {
 lista *p;                                                       /* ponteiro temporário */
 p = malloc(tamanho(lista)); p->item = x; p-
 >próximo = *l; *eu
 = p;
 }
+```
 A exclusão de uma lista vinculada é um pouco mais complicada. Primeiro, devemos encontrar um ponteiro para o antecessor do item a ser excluído.
 
+```
 lista *lista_predecessor(lista *l, item_type x) {
 if ((l == NULO) || (l->próximo == NULO)) {
 //predecessor procurado na lista nula return(NULL);
@@ -39,7 +44,8 @@ if ((l == NULO) || (l->próximo == NULO)) {
 if ((l->próximo)->item == x) return(l);
 return(lista_predecessor(l->próximo, x));
 }
-
+```
+```
 delete_list(lista **l, item_type x) {
             *p; /*                                       /* ponteiro de item */ lista
                      ponteiro antecessor */ list *pred; lista *lista_pesquisa(), *lista_predecessora();
@@ -51,6 +57,7 @@ NULL) { pred =
 grátis(p);                                              /* memória livre usada pelo nó */
 }
 }
+```
 As vantagens relativas das listas vinculadas sobre matrizes estáticas incluem:
 
 • Overflow em estruturas vinculadas nunca pode ocorrer a menos que a memória esteja realmente completo.
@@ -83,16 +90,19 @@ A pesquisa binária requer acesso rápido a dois elementos – especificamente o
 
 As operações básicas suportadas por árvores binárias são busca, travessia, inserção e exclusão.
 
+```
 typedef struct tree {item_type item;                           /* item de dados */ /
 árvore de estrutura *pai;                                             * ponteiro para o pai */ /*
 árvore de estrutura *esquerda;                                    ponteiro para o filho esquerdo */ /*
 árvore de estrutura *direita;                                        ponteiro para o filho direito */
 } árvore;
+```
 
 **Procurando em uma árvore**
 
 A rotulagem da árvore de pesquisa binária identifica exclusivamente onde cada chave está localizada. Comece pela raiz. A menos que contenha a chave de consulta x, prossiga para a esquerda ou para a direita, dependendo se x ocorre antes ou depois da chave raiz. Este algoritmo funciona porque as subárvores esquerda e direita de uma árvore de pesquisa binária são árvores de pesquisa binária. Esta estrutura recursiva produz o algoritmo de pesquisa recursiva abaixo:
 
+```
 árvore *árvore_pesquisa(árvore *l, tipo_item x) {
 if (l == NULO) return(NULO);
 if (l->item == x) return(l);
@@ -101,11 +111,13 @@ if (x item)
 else
              return( search_tree(l->direita, x) );
 }
+```
 
 **Encontrando elementos mínimos e máximos em uma árvore**
 
 A implementação da operação encontrar o mínimo requer saber onde está o elemento mínimo na árvore. Da mesma forma, o elemento máximo deve ser o descendente mais à direita da raiz.
 
+```
 árvore *encontrar_mínimo(árvore *t) {
 árvore *min;                                                            /* ponteiro para o mínimo */
 if (t == NULO) return(NULO);
@@ -114,11 +126,13 @@ while (min->esquerda!=NULO)
                        min = min->esquerda;
 return(min);
 }
+```
 
 **Travessia em uma árvore**
 
 Visitar todos os nós em uma árvore binária enraizada prova ser um componente importante de muitos algoritmos. Por definição, todas as chaves menores que a raiz devem estar na subárvore esquerda da raiz e todas as chaves maiores que a raiz na subárvore direita. Assim, visitar os nós recursivamente de acordo com tal política produz uma travessia ordenada da árvore de busca:
 
+```
 void traverse_tree(árvore *l) {
                          if (l != NULL)
                                               { traverse_tree(l->esquerda); 
@@ -126,6 +140,7 @@ void traverse_tree(árvore *l) {
                                                  traverse_tree(l->direita);
                        }
 }
+```
 
 **Inserção em uma árvore**
 
