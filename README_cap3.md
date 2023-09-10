@@ -10,9 +10,13 @@ As estruturas de dados podem ser classificadas como contíguas ou vinculadas, de
 Matrizes são estruturas de registros de dados de tamanho fixo, de modo que cada elemento possa ser localizado de forma eficiente por seu índice ou endereço (equivalente).
 
 • Acesso em tempo constante dado o índice – Como o índice de cada elemento é mapeado diretamente para um endereço de memória específico, podemos acessar itens de dados arbitrários instantaneamente, desde que conheçamos o índice.
+
 • Eficiência de espaço – Os arrays consistem exclusivamente em dados, portanto nenhum espaço é desperdiçado com links ou outras informações de formatação. Além disso, as informações de fim de registro não são necessárias porque os arrays são construídos a partir de registros de tamanho fixo.
+
 • Localidade de memória – Uma linguagem de programação comum envolve a iteração através de todos os elementos de uma estrutura de dados. Matrizes são boas para isso porque exibem excelente localidade de memória. A continuidade física entre acessos sucessivos aos dados ajuda a explorar a memória cache de alta velocidade nas arquiteturas de computadores modernas.
-Ponteiros e estruturas vinculadas
+
+**Ponteiros e estruturas vinculadas**
+
 Ponteiros são as conexões que mantêm unidas as peças das estruturas vinculadas. Os ponteiros representam o endereço de um local na memória.
 A lista é a estrutura vinculada mais simples. As três operações básicas suportadas pelas listas são pesquisa, inserção e exclusão. Nas listas duplamente vinculadas, cada nó aponta tanto para seu antecessor quanto para seu elemento sucessor.
 
@@ -63,25 +67,35 @@ grátis(p);                                              /* memória livre usada
 As vantagens relativas das listas vinculadas sobre matrizes estáticas incluem:
 
 • Overflow em estruturas vinculadas nunca pode ocorrer a menos que a memória esteja realmente completo.
+
 • Inserções e exclusões são mais simples do que em listas contíguas (array).
-• Com registros grandes, mover ponteiros é mais fácil e rápido do que mover os próprios itens.
+
+Com registros grandes, mover ponteiros é mais fácil e rápido do que mover os próprios itens.
 Enquanto as vantagens relativas dos arrays incluem:
+
 • Estruturas vinculadas requerem espaço extra para armazenar campos de ponteiro.
+
 • Listas vinculadas não permitem acesso aleatório eficiente aos itens.
+
 • Os arrays permitem melhor localização de memória e desempenho de cache do que saltos aleatórios de ponteiro.
 
 **Pilhas e Filas**
 
 Usamos o termo contêiner para denotar uma estrutura de dados que permite o armazenamento e a recuperação de itens de dados independentemente do conteúdo.
+
 • Pilhas – Suporta recuperação por ordem LIFO (último a entrar, primeiro a sair).
+
 • Filas – Suporta recuperação na ordem FIFO (primeiro a entrar, primeiro a sair).
 
 **Dicionários**
 
 O tipo de dados dicionário permite acesso a itens de dados por conteúdo. Você coloca um item em um dicionário para poder encontrá-lo quando precisar.
 As principais operações de suporte de dicionário são:
+
 • Search(D,k) – Dada uma chave de pesquisa k, retorna um ponteiro para o elemento em dicionário D cujo valor chave é k, se existir.
+
 • Insert(D,x) – Dado um item de dados x, adicione-o ao conjunto no dicionário D.
+
 • Delete(D,x) – Dado um ponteiro para um determinado item de dados x no dicionário D, remova-o de D.
 
 **Árvores de Pesquisa Binária**
