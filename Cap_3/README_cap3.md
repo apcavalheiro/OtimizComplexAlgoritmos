@@ -3,6 +3,7 @@
 As estruturas de dados podem ser classificadas como contíguas ou vinculadas, dependendo se são baseadas em arrays ou ponteiros:
 
 • Estruturas alocadas contiguamente são compostas de blocos únicos de memória e incluem arrays, matrizes, heaps e tabelas hash.
+
 • Estruturas de dados vinculadas são compostas de pedaços distintos de memória unidos por ponteiros e incluem listas, árvores e listas de adjacências de gráficos.
 
 **Matrizes**
