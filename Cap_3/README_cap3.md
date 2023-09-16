@@ -177,3 +177,43 @@ Este argumento é um exemplo importante do poder da randomização. Muitas vezes
 Árvores de busca aleatória geralmente são boas. Mas se não tivermos sorte com a nossa ordem de inserção, podemos acabar com uma árvore de altura linear no pior dos casos. Este pior caso está fora do nosso controle direto, uma vez que devemos construir a árvore em resposta às solicitações feitas pelo nosso usuário potencialmente desagradável.
 Do ponto de vista do projeto de algoritmos, é importante saber que essas árvores existem e que podem ser usadas como caixas pretas para fornecer uma implementação eficiente de dicionário. Ao calcular os custos das operações de dicionário para análise de algoritmos, podemos assumir que as complexidades do pior caso das árvores binárias balanceadas são uma medida justa.
 
+**Resumo do capítulo 3 continuação**
+
+Filas Prioritárias
+Filas prioritárias são estruturas de dados que permitem processar itens em uma ordem específica, baseada em suas chaves ou prioridades. 
+Filas prioritárias suportam três operações principais: inserir, encontrar-mínimo (ou máximo) e excluir-mínimo (ou máximo).
+Filas prioritárias podem ser implementadas de diferentes formas, como matrizes não ordenadas, matrizes ordenadas ou árvores de busca binária balanceadas.
+Filas prioritárias podem ser usadas para resolver vários problemas algorítmicos, como classificação, agendamento e modelagem de processos naturais.
+Filas prioritárias são frequentemente usadas em algoritmos de grafos, como Dijkstra e Prim, para encontrar o caminho mais curto e a árvore geradora mínima, respectivamente.
+A operação de inserção em uma fila prioritária tem complexidade de tempo O(1) para uma matriz não ordenada e O(log n) para uma árvore de busca binária balanceada.
+A operação de encontrar-mínimo tem complexidade de tempo O(n) para uma matriz não ordenada e O(1) para uma árvore de busca binária balanceada.
+A operação de excluir-mínimo tem complexidade de tempo O(n) para uma matriz não ordenada e O(log n) para uma árvore de busca binária balanceada.
+Portanto, a escolha da implementação da fila prioritária depende das necessidades específicas do problema que está sendo resolvido. Por exemplo, se as operações de inserção são mais frequentes do que as operações de encontrar-mínimo e excluir-mínimo, uma matriz não ordenada pode ser a escolha ideal. Por outro lado, se as operações de encontrar-mínimo e excluir-mínimo são mais frequentes, uma árvore de busca binária balanceada pode ser mais eficiente.
+História de Guerra: Removendo Triangulações
+Este tópico descreve um problema de particionar uma malha triangular em tiras de triângulos adjacentes para reduzir o custo de renderização em computação gráfica.
+O tópico apresenta uma heurística gananciosa que usa uma fila de prioridade para selecionar a tira mais longa a ser removida a cada passo.
+O tópico mostra que a heurística gananciosa melhora significativamente a qualidade da solução em relação à heurística ingênua e destaca a importância de escolher a estrutura de dados correta para o problema.
+Hashing e Strings
+Este tópico explica o conceito de hashing, que é uma técnica para representar um objeto grande por um número inteiro único.
+O tópico discute como escolher uma boa função hash e como lidar com colisões usando encadeamento ou endereçamento aberto.
+O tópico também apresenta algumas aplicações de hashing, como pesquisa de substring, detecção de duplicatas e verificação de integridade.
+Resolução de Colisões
+Este sub-tópico detalha as duas abordagens principais para resolver colisões em tabelas hash: encadeamento e endereçamento aberto.
+O sub-tópico compara as vantagens e desvantagens de cada abordagem em termos de complexidade de tempo, espaço e implementação.
+Correspondência eficiente de strings via hash
+Este sub-tópico apresenta um algoritmo aleatório para correspondência de strings chamado algoritmo Rabin-Karp, que usa hashing para acelerar a pesquisa de substrings.
+O sub-tópico explica como o algoritmo calcula os valores de hash das janelas sobrepostas do texto em tempo constante usando uma função hash baseada em potências de um número primo.
+O sub-tópico analisa o tempo esperado e o pior caso do algoritmo e discute as probabilidades de falsas colisões.
+Detecção de duplicatas via hash
+Este sub-tópico ilustra algumas aplicações práticas de hashing para detectar duplicatas em documentos, leilões ou sequências de DNA.
+O sub-tópico mostra como usar códigos hash para verificar se um documento é diferente de todos os outros em um grande corpus, se parte dele foi plagiada ou se ele foi alterado.
+O sub-tópico também menciona o conceito de hashing criptográfico, que é uma forma mais segura e robusta de hashing.
+Estruturas de Dados Especializadas
+Este tópico introduz algumas estruturas de dados especializadas para representar tipos mais estruturados ou especializados de objetos, como strings, dados geométricos, gráficos e conjuntos.
+O tópico fornece alguns exemplos dessas estruturas de dados, como árvores/matrizes de sufixo, kd-árvores, matrizes/listas de adjacência e vetores de bits.
+O tópico também indica onde encontrar mais detalhes sobre essas estruturas no catálogo.
+História de Guerra: Amarre-os
+Este tópico descreve um problema de biologia computacional relacionado ao sequenciamento por hibridização (SBH), que é uma técnica proposta para sequenciar DNA usando sondas que detectam substrings do DNA alvo.
+O tópico apresenta um algoritmo para identificar todas as strings possíveis de comprimento 2k que são substrings do DNA alvo, dado o conjunto de todas as substrings de comprimento k do DNA alvo.
+O tópico mostra como usar uma estrutura de dados combinando uma fila prioritária e um dicionário para acelerar o algoritmo e relata os desafios e resultados da implementação.
+
