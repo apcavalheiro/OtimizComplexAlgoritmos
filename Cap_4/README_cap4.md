@@ -93,7 +93,29 @@
       right = [x for x in arr if x > pivot]
       return quickSort(left) + middle + quickSort(right)
   ```
+### 4.7 Distribution Sort: Sorting via Bucketing
 
+- **Descrição**: A ordenação por distribuição, ou Distribution Sort, envolve a distribuição dos elementos da lista em "buckets" ou "caixas" com base em algum critério (por exemplo, faixas de valores). Cada caixa é então ordenada separadamente e, em seguida, os elementos são combinados para formar a lista ordenada.
+
+- **Exemplo em Python**: Aqui está um exemplo simplificado de ordenação por distribuição usando o Python:
+  ```python
+  def distributionSort(arr):
+      # Determine o número de caixas e crie caixas vazias
+      num_boxes = max(arr) + 1
+      boxes = [[] for _ in range(num_boxes)]
+
+      # Distribua os elementos nas caixas
+      for num in arr:
+          boxes[num].append(num)
+
+      # Combine as caixas ordenadas
+      sorted_arr = []
+      for box in boxes:
+          sorted_arr.extend(box)
+
+      return sorted_arr
+  ```
+  
 ### 4.9 Binary Search and Related Algorithms
 
 - **Descrição**: Este tópico aborda o algoritmo de busca binária, que é usado para encontrar um elemento específico em uma lista ordenada. Ele é altamente eficiente e divide a busca pela metade em cada etapa.
@@ -154,3 +176,8 @@
 A técnica "Divide-and-Conquer" é aplicada em uma variedade de algoritmos, incluindo Merge Sort, Quick Sort, Strassen's Matrix Multiplication, entre outros. Ela é especialmente útil quando um problema pode ser dividido em subproblemas independentes que podem ser resolvidos de forma eficiente, e as soluções desses subproblemas podem ser combinadas para resolver o problema geral.
 
 Estes são os tópicos e exemplos chave do Capítulo 4 do livro "The Algorithm Design Manual" de Steven S. Skiena. Cada tópico aborda um aspecto importante da ordenação e busca de dados, fornecendo insights valiosos sobre como essas técnicas são aplicadas em algoritmos práticos.
+
+
+
+
+
