@@ -1,5 +1,8 @@
 ### Capítulo 8 - Programação Dinâmica
 
+A programação dinâmica nos dá uma maneira de projetar algoritmos personalizados que pesquisam sistematicamente todas as possibilidades (garantindo assim a correção) enquanto armazenam os resultados para evitar a recomputação (proporcionando assim eficiência). Ao armazenar as consequências de todas as decisões possíveis e usar essas informações de forma sistemática, a quantidade total de trabalho é minimizada.
+
+A programação dinâmica é geralmente o método certo para problemas de otimização em objetos combinatórios que têm uma ordem inerente da esquerda para a direita entre os componentes. Os objetos da esquerda para a direita incluem: cadeias de caracteres, árvores com raízes, polígonos e sequências inteiras.
 
 ### 8.1 Cache vs. Computação
 
