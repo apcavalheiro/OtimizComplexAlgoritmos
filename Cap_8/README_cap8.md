@@ -6,6 +6,7 @@ A programação dinâmica é geralmente o método certo para problemas de otimiz
 
 ### 8.1 Cache vs. Computação
 
+A programação dinâmica é essencialmente uma troca de espaço por tempo. Recomputar repetidamente uma determinada quantidade é inofensivo, a menos que o tempo gasto para fazer isso atrapalhe o desempenho. Então, é melhor armazenar os resultados do cálculo inicial e procurá-los em vez de recalculá-los novamente.
 
 ### 8.1.1 Números de Fibonacci por Recursão
 
