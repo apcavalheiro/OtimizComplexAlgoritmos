@@ -12,15 +12,19 @@ A programação dinâmica é essencialmente uma troca de espaço por tempo. Reco
 
 Os números de Fibonacci foram originalmente definidos pelo matemático italiano Fibonacci no século XIII para modelar o crescimento das populações de coelhos. Um algoritmo de função recursiva escrito em C se parece com isto:
 
+```
 long fib_r(int n)
 {
 	if (n == 0) return(0);
 	if (n == 1) return(1);
 	return(fib_r(n-1) + fib_r(n-2));
 }
-
+```
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/19896dc0-b67f-4413-ab72-284160727d2b)
 
 ### 8.1.2 Números de Fibonacci por Cache
+
+
 
 ### 8.1.3 Números de Fibonacci por Programação Dinâmica
 
