@@ -140,6 +140,7 @@ int parent; /* célula parental */
 célula m [MAXLEN + 1] [MAXLEN + 1]; / * tabela de programação dinâmica * /
 ```
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/da193c00-2531-4ecb-993a-3a4fbc2b8e26)
+
 Figura 8.4: Exemplo de uma matriz de programação dinâmica para editar o cálculo da distância, com o caminho de alinhamento ideal destacado em negrito.
 
 ### 8.2.3 Reconstruindo o Caminho
@@ -147,6 +148,7 @@ Figura 8.4: Exemplo de uma matriz de programação dinâmica para editar o cálc
 A reconstrução dessas decisões é feita caminhando para trás a partir do estado de objetivo, seguindo o ponteiro pai de volta para uma célula anterior. Repetimos esse processo até chegarmos de volta à célula inicial. 
 
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/91fba545-b0a8-43a2-8980-8fa686a559aa)
+
 Figura 8.5: Matriz principal para edição de cálculo de distância, com o caminho de alinhamento ideal destacado em negrito
 
 ### 8.2.4 Variedades de Distância de Edição
