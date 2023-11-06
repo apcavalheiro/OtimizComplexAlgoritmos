@@ -22,7 +22,7 @@ long fib_r(int n)
 ```
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/19896dc0-b67f-4413-ab72-284160727d2b)
 
-Figura 8.1: A árvore de computação para calcular números de Fibonacci recursivamente
+Figura 8.1: A árvore de computação para calcular números de Fibonacci recursivamente.
 
 ### 8.1.2 Números de Fibonacci por Cache
 
@@ -150,7 +150,7 @@ A reconstrução dessas decisões é feita caminhando para trás a partir do est
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/91fba545-b0a8-43a2-8980-8fa686a559aa)
 
 
-Figura 8.5: Matriz principal para edição de cálculo de distância, com o caminho de alinhamento ideal destacado em negrito
+Figura 8.5: Matriz principal para edição de cálculo de distância, com o caminho de alinhamento ideal destacado em negrito.
 
 ### 8.2.4 Variedades de Distância de Edição
 
@@ -178,9 +178,33 @@ Eles se enquadram em quatro categorias:
 
 ### 8.5 O Problema de Partição
 
+Suponha que três funcionários tenham a tarefa de examinar uma estante de livros em busca de uma determinada informação. Para realizar o trabalho de forma justa e eficiente, os livros devem ser divididos entre os três trabalhadores. Para evitar a necessidade de reorganizar os livros ou separá-los em pilhas, é mais simples dividir a estante em três regiões e atribuir cada região a um trabalhador.
+
+Mas qual é a maneira mais justa de dividir a prateleira? Se todos os livros tiverem o mesmo comprimento, o trabalho será bem fácil. Basta dividir os livros em regiões de tamanhos iguais,
+100 100 100 | 100 100 100 | 100 100 100
+para que todos tenham 300 páginas para lidar.
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/2750d520-0679-4b6a-babb-032ffdfef0a0)
+
+Figura 8.9: Uma gramática livre de contexto (l) com uma árvore de análise associada (r).
+
 ### 8.6 Analisando Gramáticas Livres de Contexto
 
+Os compiladores identificam se o programa fornecido é legal na linguagem de programação e recompensam você com erros de sintaxe, caso contrário. Isso requer uma descrição precisa da sintaxe da linguagem, normalmente fornecida por uma gramática livre de contexto.
+
+Analisar uma determinada sequência de texto S de acordo com uma dada gramática livre de contexto G é o problema algorítmico de construir uma árvore de análise de substituições de regras definindo S como um único símbolo não terminal de G.
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/b08e9afa-ebec-409f-9358-adc0bf025cb2)
+
+A Figura 8.10: Dois triangulações diferentes de um dado convexa sete-gon.
+
 ### 8.6.1 Triangulação de Peso Mínimo
+
+Uma triangulação de um polígono P = {v1, ..., vn, v1} é um conjunto de diagonais sem intersecção que divide o polígono em triângulos. Dizemos que o peso de uma triangulação é a soma dos comprimentos de suas diagonais. Conforme mostrado na Figura 8.10, qualquer polígono dado pode ter muitas triangulações diferentes. Procuramos encontrar sua triangulação de peso mínimo para um dado polígono p. A triangulação é um componente fundamental da maioria dos algoritmos geométricos.
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/bde3df34-c7ff-4ec3-99ae-28e40bcaea3d)
+
+Figura 8.11: Selecionando o vértice k para emparelhar com uma aresta (i, j) do polígono.
 
 ### 8.7 Limitações da programação dinâmica: TSP
 
