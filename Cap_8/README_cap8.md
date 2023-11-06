@@ -157,7 +157,6 @@ Figura 8.5: Matriz principal para edição de cálculo de distância, com o cami
 
 ### 8.6 Analisando Gramáticas Livres de Contexto
 
-
 ### 8.6.1 Triangulação de Peso Mínimo
 
 ### 8.7 Limitações da programação dinâmica: TSP
@@ -165,7 +164,3 @@ Figura 8.5: Matriz principal para edição de cálculo de distância, com o cami
 ### 8.7.1 Quando os algoritmos de programação dinâmica estão corretos?
 
 ### 8.7.2 Quando os algoritmos de programação dinâmica são eficientes?
-
-
-
-##
