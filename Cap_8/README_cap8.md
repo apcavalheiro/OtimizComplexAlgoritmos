@@ -96,14 +96,58 @@ Existem três tipos naturais de mudanças:
 
 • Exclusão - Exclua um único caractere do padrão P para ajudá-lo a corresponder ao texto T, como alterar “hour” para “our”.
 
-
-
 ### 8.2.1 Editar Distância por Recursiva
 
+Podemos definir um algoritmo recursivo usando a observação de que o último caractere na string deve ser correspondido, substituído, inserido ou excluído. Cortar os caracteres envolvidos nesta última operação de edição deixa um par de strings menores. Sejam i e j o último caractere do prefixo relevante de P e T, respectivamente. Existem três pares de strings mais curtas após a última operação, correspondendo às strings após uma correspondência / substituição, inserção ou exclusão. Se soubéssemos o custo de edição desses três pares de strings menores, poderíamos decidir qual opção leva à melhor solução e escolher essa opção de acordo. 
+
+```
+#define MATCH 0 /* enumerated type symbol for match */
+#define INSERT 1 /* enumerated type symbol for insert */
+#define DELETE 2 /* enumerated type symbol for delete */
+
+int string_compare(char *s, char *t, int i, int j)
+{
+	int k; /* counter */
+	int opt[3]; /* cost of the three options */
+	int lowest_cost; /* lowest cost */
+	
+	if (i == 0) return(j * indel(’ ’));
+	
+	if (j == 0) return(i * indel(’ ’));
+	
+	opt[MATCH] = string_compare(s,t,i-1,j-1) + match(s[i],t[j]);
+	opt[INSERT] = string_compare(s,t,i,j-1) + indel(t[j]);
+	opt[DELETE] = string_compare(s,t,i-1,j) + indel(s[i]);
+
+	lowest_cost = opt[MATCH];
+	for (k=INSERT; k<=DELETE; k++)
+		if (opt[k] < lowest_cost) lowest_cost = opt[k];
+
+	return( lowest_cost );
+}
+```
 
 ### 8.2.2 Editar Distância por Programação Dinâmica
 
+Uma implementação de programação dinâmica baseada em tabela desse algoritmo é fornecida abaixo. A tabela é uma matriz bidimensional m onde cada um dos | P | · | T | células contém o custo da solução ideal para um subproblema, bem como um ponteiro pai explicando como chegamos a este local:
+
+```
+typedef struct {
+custo interno; / * custo de alcançar esta célula * /
+int parent; /* célula parental */
+} célula;
+
+célula m [MAXLEN + 1] [MAXLEN + 1]; / * tabela de programação dinâmica * /
+```
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/da193c00-2531-4ecb-993a-3a4fbc2b8e26)
+Figura 8.4: Exemplo de uma matriz de programação dinâmica para editar o cálculo da distância, com o caminho de alinhamento ideal destacado em negrito.
+
 ### 8.2.3 Reconstruindo o Caminho
+
+A reconstrução dessas decisões é feita caminhando para trás a partir do estado de objetivo, seguindo o ponteiro pai de volta para uma célula anterior. Repetimos esse processo até chegarmos de volta à célula inicial. 
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/91fba545-b0a8-43a2-8980-8fa686a559aa)
+Figura 8.5: Matriz principal para edição de cálculo de distância, com o caminho de alinhamento ideal destacado em negrito
 
 ### 8.2.4 Variedades de Distância de Edição
 
