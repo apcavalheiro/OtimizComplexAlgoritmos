@@ -90,11 +90,11 @@ Figura 8.3: Ordem de avaliação do coeficiente binomial em M [5, 4] (l). Condi�
 
 Existem três tipos naturais de mudanças:
 
-• Substituição - Substitua um único caractere do padrão P por um caractere diferente no texto T, como alterar “shot” para “spot”.
+• **Substituição** - Substitua um único caractere do padrão P por um caractere diferente no texto T, como alterar “shot” para “spot”.
 
-• Inserção - insira um único caractere no padrão P para ajudá-lo a corresponder ao texto T, como alterar “ago” para “agog”.
+• **Inserção** - insira um único caractere no padrão P para ajudá-lo a corresponder ao texto T, como alterar “ago” para “agog”.
 
-• Exclusão - Exclua um único caractere do padrão P para ajudá-lo a corresponder ao texto T, como alterar “hour” para “our”.
+• **Exclusão** - Exclua um único caractere do padrão P para ajudá-lo a corresponder ao texto T, como alterar “hour” para “our”.
 
 ### 8.2.1 Editar Distância por Recursiva
 
@@ -154,7 +154,27 @@ Figura 8.5: Matriz principal para edição de cálculo de distância, com o cami
 
 ### 8.2.4 Variedades de Distância de Edição
 
+Eles se enquadram em quatro categorias:
+
+• **Inicialização da tabela** - As funções row init e column init inicializam a linha zero e a coluna da tabela de programação dinâmica, respectivamente. Para o problema de distância de edição de string, as células (i, 0) e (0, i) correspondem a strings de comprimento-i correspondentes à string vazia. 
+
+• **Custos de penalidade** - As funções match (c, d) e indel (c) apresentam os custos para transformar o caractere c em d e inserir / excluir o caractere c. Para distância de edição padrão, a correspondência não deve custar nada se os caracteres forem idênticos e, caso contrário; enquanto indel retorna 1 independentemente de qual seja o argumento. 
+
+• **Identificação da célula objetivo** - A célula objetivo da função retorna os índices da célula que marca o ponto final da solução. Para editar a distância, isso é definido pelo comprimento das duas strings de entrada.
+
+• **Ações de rastreamento** - As funções combinam, inserem e excluem realizam as ações apropriadas para cada operação de edição durante o rastreamento. Para editar a distância, isso pode significar imprimir o nome da operação ou personagem envolvido, conforme determinado pelas necessidades do aplicativo.
+
+• **Correspondência de substring** - suponha que desejamos encontrar onde um padrão curto P ocorre melhor em um texto longo T - digamos, procurando por “Skiena” em todos os seus erros ortográficos (Skienna, Skena, Skina, ...) em um arquivo longo.
+
+• **Subsequência comum mais longa** - talvez estejamos interessados em encontrar a sequência de caracteres mais longa e dispersa incluída em ambas as sequências. Uma subsequência comum é definida por todas as correspondências de caracteres idênticos em um traço de edição. Para maximizar o número de tais correspondências, devemos evitar a substituição de caracteres não idênticos.  
+
+• **Subsequência Monótona Máxima** - Uma sequência numérica aumenta monotonicamente se o iº elemento for pelo menos tão grande quanto o (i - 1) o elemento. O problema da subsequência monotônica máxima busca deletar o menor número de elementos de uma string de entrada S para deixar uma subsequência monotonicamente crescente. Uma subsequência crescente mais longa de 243517698 é 23568.
+
 ### 8.3 Sequência Crescente Mais Longa
+
+• O comprimento da sequência crescente mais longa em s1, s2, ..., sn − 1 parece útil saber. Na verdade, esta será a sequência crescente mais longa em S, a menos que sn estenda alguma sequência crescente do mesmo comprimento.
+
+• Precisamos saber o comprimento da sequência mais longa que sn irá estender. Para ter certeza de que sabemos disso, realmente precisamos do comprimento da sequência mais longa que qualquer valor possível para sn pode estender.
 
 ### 8.5 O Problema de Partição
 
