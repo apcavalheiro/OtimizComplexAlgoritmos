@@ -149,6 +149,7 @@ A reconstrução dessas decisões é feita caminhando para trás a partir do est
 
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/91fba545-b0a8-43a2-8980-8fa686a559aa)
 
+
 Figura 8.5: Matriz principal para edição de cálculo de distância, com o caminho de alinhamento ideal destacado em negrito
 
 ### 8.2.4 Variedades de Distância de Edição
