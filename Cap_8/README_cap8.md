@@ -28,6 +28,7 @@ Figura 8.1: A árvore de computação para calcular números de Fibonacci recurs
 
 Podemos armazenar (ou armazenar em cache) explicitamente os resultados de cada cálculo de Fibonacci F (k) em uma estrutura de dados de tabela indexada pelo parâmetro k. A chave para evitar a recomputação é verificar explicitamente o valor antes de tentar computá-lo:
 
+```
 #define MAXN 45 /* largest interesting n */
 
 #define UNKNOWN -1 /* contents denote an empty cell */
@@ -56,20 +57,45 @@ long fib_c_driver(int n)
  
 	return(fib_c(n));
 }
-
+```
 ![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/3f690a34-84da-4769-b251-5e86eb2dc878)
 
 Figura 8.2: A árvore de computação de Fibonacci ao armazenar valores em cache.
-
-
-
-
 ### 8.1.3 Números de Fibonacci por Programação Dinâmica
 
+Podemos calcular Fn em tempo linear mais facilmente, especificando explicitamente a ordem de avaliação da relação de recorrência:
 
+```
+long fib_dp(int n)
+{
+	int i; /* counter */
+	long f[MAXN+1]; /* array to cache computed fib values */
+
+	f[0] = 0;
+	f[1] = 1;
+	for (i=2; i<=n; i++) f[i] = f[i-1]+f[i-2];
+	
+	return(f[n]);
+}
+```
 ### 8.1.4 Coeficientes Binomiais
 
+Uma maneira mais estável de calcular coeficientes binomiais é usar a relação de recorrência implícita na construção do triângulo de Pascal:
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/05c0603c-7c27-4eb4-890b-956ff27b2698)
+
+Figura 8.3: Ordem de avaliação do coeficiente binomial em M [5, 4] (l). Condições de inicialização A-K, avaliações de recorrência 1-10. 
+
 ### 8.2 Correspondência Aproximada de Strings
+
+Existem três tipos naturais de mudanças:
+
+• Substituição - Substitua um único caractere do padrão P por um caractere diferente no texto T, como alterar “shot” para “spot”.
+
+• Inserção - insira um único caractere no padrão P para ajudá-lo a corresponder ao texto T, como alterar “ago” para “agog”.
+
+• Exclusão - Exclua um único caractere do padrão P para ajudá-lo a corresponder ao texto T, como alterar “hour” para “our”.
+
 
 
 ### 8.2.1 Editar Distância por Recursiva
