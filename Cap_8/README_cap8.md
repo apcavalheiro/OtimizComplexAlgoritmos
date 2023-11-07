@@ -208,6 +208,24 @@ Figura 8.11: Selecionando o vértice k para emparelhar com uma aresta (i, j) do 
 
 ### 8.7 Limitações da programação dinâmica: TSP
 
+A programação dinâmica nem sempre funciona. É importante ver por que ele pode falhar, para ajudar a evitar armadilhas que levam a algoritmos incorretos ou ineficientes.
+
+Nosso garoto-propaganda algorítmico será mais uma vez o caixeiro-viajante, onde buscamos o mais curto passeio visitando todas as cidades em um gráfico. Vamos limitar a atenção aqui a um caso especial interessante:
+
+**Problema:** Caminho Simples Mais Longo.
+
+**Entrada:** Um gráfico ponderado G, com vértices iniciais e finais especificados s e t.
+
+**Saída:** Qual é o caminho mais caro de s para t que não visita nenhum vértice mais de uma vez?
+
+Este problema difere do TSP de duas maneiras sem importância. Primeiro, ele pede um caminho em vez de um passeio fechado. Essa diferença não é substancial: obtemos um passeio fechado simplesmente incluindo a borda (t, s). Em segundo lugar, ele pede o caminho mais caro em vez do passeio menos caro. Novamente, essa diferença não é muito significativa: ela nos incentiva a visitar o maior número possível de vértices (idealmente todos), assim como no TSP. A grande palavra na definição do problema é simples, o que significa que não temos permissão para visitar nenhum vértice mais de uma vez.
+
 ### 8.7.1 Quando os algoritmos de programação dinâmica estão corretos?
 
+Os algoritmos de programação dinâmica são tão corretos quanto as relações de recorrência nas quais se baseiam. Suponha que definamos LP [i, j] como uma função que denota o comprimento do caminho simples mais longo de i para j. Observe que o caminho simples mais longo de i para j teve que visitar algum vértice x logo antes de chegar a j. Assim, a última aresta visitada deve estar no formato (x, j). Isso sugere a seguinte relação de recorrência para calcular o comprimento do caminho mais longo, onde c (x, j) é o custo / peso da borda (x, j):
+
+![image](https://github.com/apcavalheiro/OtimizComplexAlgoritmos/assets/142835210/89962daa-5702-4cee-8c52-cdd6372e4ecb)
+
 ### 8.7.2 Quando os algoritmos de programação dinâmica são eficientes?
+
+O tempo de execução de qualquer algoritmo de programação dinâmica é função de duas coisas: (1) número de soluções parciais que devemos controlar e (2) quanto tempo leva para avaliar cada solução parcial. A primeira questão - a saber, o tamanho do espaço de estado - geralmente é a preocupação mais urgente.
