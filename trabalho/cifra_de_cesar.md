@@ -1,30 +1,74 @@
-### Algoritmo 1: Cifra de César
+# Cifra de César em Python
 
-#### Descrição:
-O Algoritmo 1 é baseado na Cifra de César, uma técnica de criptografia de substituição simples que desloca cada letra do texto original por um número fixo de posições no alfabeto. Este é um exemplo básico e inseguro de criptografia, usado apenas para fins educacionais.
+Este é um simples implementação em Python da Cifra de César, um algoritmo de criptografia clássico.
 
-#### Explicação:
-- `cifra_de_cesar`: Esta função recebe um texto e uma chave como entrada e retorna o texto cifrado usando a Cifra de César. A cifra funciona deslocando cada letra do texto pelo valor da chave. Se o caractere não for uma letra, ele é deixado inalterado.
+## Funcionalidades
 
-- A interface gráfica é criada usando a biblioteca tkinter. Ela inclui campos de entrada para o texto original e a chave, um botão para cifrar o texto e um rótulo para exibir o resultado.
+- Cifrar uma mensagem usando a Cifra de César.
+- Decifrar uma mensagem usando a Cifra de César.
 
-#### Execução:
+## Como usar
 
-1. Abra o prompt de comando e navegue até a pasta onde você salvou o arquivo `cifra_de_cesar.py`.
+1. Navegue até o diretório do projeto:
 
-2. Execute o script com o comando:
+    ```bash
+    cd cifra-de-cesar-python
+    ```
 
+2. Execute o script Python:
+
+    ```bash
+    python cifra_cesar.py
+    ```
+
+3. Siga as instruções para inserir a palavra a ser cifrada, a chave de cifra e escolher entre cifrar ou decifrar.
+
+# Cifra de César
+
+Este é um simples exemplo de uma função Python que implementa a Cifra de César para cifrar e decifrar mensagens.
+
+## Função `cifra_cesar`
+
+A função `cifra_cesar` realiza a cifragem ou decifragem de um texto usando o algoritmo de Cifra de César.
+
+### Parâmetros:
+
+- `texto (str)`: O texto a ser cifrado ou decifrado.
+- `chave (int)`: A chave de cifra, determinando o número de posições a serem deslocadas.
+- `modo (str)`: 'cifrar' para cifrar o texto, 'decifrar' para decifrar o texto.
+
+### Retorno:
+
+- `str`: O texto cifrado ou decifrado.
+
+## Exemplo de Uso
+
+```python
+# Importa a função
+from cifra_cesar import cifra_cesar
+
+# Palavra a ser cifrada
+palavra_original = "Admin"
+
+# Chave de cifra (por exemplo, 3)
+chave = 3
+
+# Cifra a palavra
+palavra_cifrada = cifra_cesar(palavra_original, chave, modo='cifrar')
+
+# Exibe os resultados
+print(f"Palavra Original: {palavra_original}")
+print(f"Chave de Cifra: {chave}")
+print(f"Palavra Cifrada: {palavra_cifrada}")
+
+# Decifra a palavra
+palavra_decifrada = cifra_cesar(palavra_cifrada, chave, modo='decifrar')
+
+# Exibe os resultados da decifragem
+print(f"Palavra Decifrada: {palavra_decifrada}")
 ```
-python cifra_de_cesar.py
-```
 
-3. A interface gráfica será aberta. Você verá os seguintes campos:
+## Notas Adicionais
 
-   - "Texto Original": Digite o texto que deseja cifrar. Por exemplo, digite "HELLO" (sem as aspas).
-
-   - "Chave (deslocamento)": Insira um número inteiro que servirá como chave de deslocamento. Por exemplo, insira "3".
-
-4. Clique no botão "Cifrar" para executar o algoritmo.
-
-5. O campo "Texto Cifrado" mostrará o resultado da cifração. No exemplo acima, o resultado seria "KHOOR" como saída, pois cada letra foi deslocada 3 posições no alfabeto.
-
+- A Cifra de César é um método de criptografia simples que desloca as letras do alfabeto por um número fixo de posições.
+- Este é um exemplo educativo e não deve ser usado como implementação de segurança em produção.

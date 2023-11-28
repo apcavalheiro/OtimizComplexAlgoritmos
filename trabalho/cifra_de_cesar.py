@@ -1,43 +1,62 @@
-import tkinter as tk
+def cifra_cesar(texto, chave, modo='cifrar'):
+    """
+    Cifra ou decifra o texto usando o algoritmo de Cifra de César.
 
-# Função para criptografar usando a Cifra de César
-def cifra_de_cesar(texto, chave):
-    texto_cifrado = ""
+    Parameters:
+    texto (str): O texto a ser cifrado ou decifrado.
+    chave (int): A chave de cifra, determina o número de posições a serem deslocadas.
+    modo (str): 'cifrar' para cifrar o texto, 'decifrar' para decifrar o texto.
+
+    Returns:
+    str: O texto cifrado ou decifrado.
+    """
+    resultado = ""
+
+    # Determina a operação com base no modo
+    if modo == 'decifrar':
+        chave = -chave  # Inverte a chave para decifrar
+
     for char in texto:
+        # Verifica se o caractere é uma letra
         if char.isalpha():
-            shift = ord('a') if char.islower() else ord('A')
-            texto_cifrado += chr((ord(char) - shift + chave) % 26 + shift)
+            # Determina se o caractere é maiúsculo ou minúsculo
+            is_upper = char.isupper()
+            
+            # Converte o caractere para minúsculo para facilitar a cifragem
+            char = char.lower()
+
+            # Aplica a cifra de César
+            codigo = ord(char) - ord('a')
+            novo_codigo = (codigo + chave) % 26
+            novo_char = chr(novo_codigo + ord('a'))
+
+            # Converte de volta para maiúsculo, se necessário
+            if is_upper:
+                novo_char = novo_char.upper()
+
+            resultado += novo_char
         else:
-            texto_cifrado += char
-    return texto_cifrado
+            # Se não for uma letra, mantém o caractere inalterado
+            resultado += char
 
-# Função para cifrar o texto quando o botão "Cifrar" é pressionado
-def cifrar_texto():
-    texto_original = entrada_texto.get()
-    chave = int(entrada_chave.get())
-    texto_cifrado = cifra_de_cesar(texto_original, chave)
-    label_resultado["text"] = "Texto Cifrado: " + texto_cifrado
+    return resultado
 
-# Configuração da interface gráfica
-janela = tk.Tk()
-janela.title("Cifra de César")
+# Palavra a ser cifrada
+palavra_original = "Admin"
 
-entrada_label = tk.Label(janela, text="Texto Original:")
-entrada_label.pack()
+# Chave de cifra (por exemplo, 3)
+chave = 3
 
-entrada_texto = tk.Entry(janela)
-entrada_texto.pack()
+# Cifra a palavra
+palavra_cifrada = cifra_cesar(palavra_original, chave, modo='cifrar')
 
-chave_label = tk.Label(janela, text="Chave (deslocamento):")
-chave_label.pack()
+# Exibe os resultados
+print(f"Palavra Original: {palavra_original}")
+print(f"Chave de Cifra: {chave}")
+print(f"Palavra Cifrada: {palavra_cifrada}")
 
-entrada_chave = tk.Entry(janela)
-entrada_chave.pack()
+# Decifra a palavra
+palavra_decifrada = cifra_cesar(palavra_cifrada, chave, modo='decifrar')
 
-botao_cifrar = tk.Button(janela, text="Cifrar", command=cifrar_texto)
-botao_cifrar.pack()
-
-label_resultado = tk.Label(janela, text="")
-label_resultado.pack()
-
-janela.mainloop()
+# Exibe os resultados da decifragem
+print(f"Palavra Decifrada: {palavra_decifrada}")

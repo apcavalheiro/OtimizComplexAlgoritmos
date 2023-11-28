@@ -1,48 +1,39 @@
+# Cifragem e Decifragem usando AES em Python
 
-### Algoritmo 2: AES (Advanced Encryption Standard)
+Este é um exemplo simples de um script Python que usa a biblioteca `cryptography` para cifrar e decifrar mensagens usando o algoritmo AES.
 
-#### Descrição:
-O Algoritmo 2 utiliza o Advanced Encryption Standard (AES) para criptografar dados de forma segura. O AES é um algoritmo de criptografia simétrica amplamente adotado e considerado seguro para proteção de dados confidenciais.
+## Instalação
 
-#### Explicação:
-- `gerar_chave_aes`: Esta função gera uma chave AES usando o módulo Fernet da biblioteca `cryptography`. A chave é uma sequência aleatória que será usada para criptografar e descriptografar o texto.
+Antes de executar o script, certifique-se de ter a biblioteca `cryptography` instalada. Você pode instalá-la usando o seguinte comando:
 
-- `cifrar_aes`: Esta função recebe um texto e uma chave AES como entrada e retorna o texto cifrado usando o AES. A biblioteca Fernet facilita a cifragem e decifragem dos dados.
-
-- A interface gráfica para o AES é semelhante à do Algoritmo 1, mas inclui a geração de uma chave AES e usa essa chave para cifrar o texto.
-
-#### Execução:
-
-Certifique-se de ter a biblioteca `cryptography` instalada. Se você ainda não instalou, você pode instalar via `pip`:
-
-Abra o terminal e execute o comando:
 ```bash
 pip install cryptography
 ```
 
-Isso instalará a biblioteca `cryptography` necessária para o Algoritmo 2.
+## Por que Utilizar uma Biblioteca?
 
-### Execução do Algoritmo 2: AES (Advanced Encryption Standard)
+A implementação direta do algoritmo AES pode ser complexa e propensa a erros. O uso de uma biblioteca como `cryptography` oferece várias vantagens:
 
-1. Abra o terminal ou prompt de comando.
+1. **Segurança**: Bibliotecas amplamente utilizadas, como `cryptography`, são mantidas e atualizadas por especialistas em segurança para garantir robustez e correção.
+2. **Desempenho**: Implementações otimizadas em bibliotecas podem oferecer melhor desempenho do que implementações feitas do zero em Python puro.
+3. **Padrões e Melhores Práticas**: Bibliotecas seguem padrões e melhores práticas estabelecidos, reduzindo a probabilidade de erros e vulnerabilidades.
+4. **Facilidade de Uso**: Bibliotecas fornecem interfaces de alto nível que simplificam a implementação e utilização dos algoritmos criptográficos.
 
-2. Navegue até a pasta onde você salvou o arquivo `aes.py` utilizando o comando `cd`.
+## Execução
 
-3. Execute o script com o seguinte comando:
-   
+Execute o script `aes.py` para cifrar e decifrar usando o algoritmo AES.
+
 ```bash
 python aes.py
 ```
 
-Isso iniciará a interface gráfica do algoritmo que utiliza o AES para criptografar texto.
+O script gerará uma chave AES de 16 bytes (128 bits), cifrará a palavra original "Admin" e, em seguida, decifrará a palavra cifrada, exibindo os resultados na console.
 
-### Utilizando a interface gráfica:
+## Estrutura do Projeto
 
-Ao executar o script `aes.py`, uma interface gráfica será aberta.
+- `aes.py`: Script para cifrar e decifrar usando o algoritmo AES.
 
-- Você verá campos para inserir o texto que deseja cifrar e a chave de criptografia.
-- Insira o texto e a chave nos campos correspondentes.
-- Em seguida, clique no botão apropriado para realizar a criptografia.
-- A interface exibirá o texto cifrado resultante na própria interface.
+## Notas Adicionais
 
-O AES é um algoritmo de criptografia simétrica, amplamente utilizado para criptografar e descriptografar dados. A interface gráfica permitirá que você experimente a funcionalidade de criptografia oferecida por esse algoritmo.
+- Certifique-se de manter as chaves seguras, pois elas são necessárias para decifrar os dados cifrados.
+- Este é um exemplo educativo e não deve ser usado como implementação de segurança em produção.

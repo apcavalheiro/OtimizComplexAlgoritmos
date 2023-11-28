@@ -1,41 +1,32 @@
-import tkinter as tk
 from cryptography.fernet import Fernet
 
-# Chave Fernet válida
-chave = b'MWVqsaTYKCg3sWVQZ22NE8KUxW_6SpOybkN-CRFdaSo='
+def fernet_cifrar(texto, chave):
+    cipher_suite = Fernet(chave)
+    ciphertext = cipher_suite.encrypt(texto)
+    return ciphertext
 
-# Função para cifrar usando AES
-def cifrar_aes(texto, chave):
-    fernet = Fernet(chave)
-    texto_bytes = texto.encode()
-    texto_cifrado = fernet.encrypt(texto_bytes)
-    return texto_cifrado
+def fernet_decifrar(texto_cifrado, chave):
+    cipher_suite = Fernet(chave)
+    texto_decifrado = cipher_suite.decrypt(texto_cifrado)
+    return texto_decifrado
 
-# Função para cifrar o texto quando o botão "Cifrar" é pressionado
-def cifrar_texto_aes():
-    texto_original = entrada_texto_aes.get()
-    texto_cifrado = cifrar_aes(texto_original, chave)
-    texto_cifrado_str = texto_cifrado.decode()
-    texto_cifrado_entry.delete(0, tk.END)
-    texto_cifrado_entry.insert(0, texto_cifrado_str)
+# Palavra a ser cifrada
+palavra_original = b"Admin"
 
-# Configuração da interface gráfica para AES
-janela_aes = tk.Tk()
-janela_aes.title("AES (Advanced Encryption Standard)")
+# Gere uma chave Fernet
+chave = Fernet.generate_key()
 
-entrada_label_aes = tk.Label(janela_aes, text="Texto Original:")
-entrada_label_aes.pack()
+# Cifra a palavra
+palavra_cifrada = fernet_cifrar(palavra_original, chave)
 
-entrada_texto_aes = tk.Entry(janela_aes)
-entrada_texto_aes.pack()
+# Exibe os resultados da cifragem
+print(f"Palavra Original: {palavra_original}")
+print(f"Chave de Cifra: {chave}")
+print(f"Palavra Cifrada: {palavra_cifrada}")
 
-botao_cifrar_aes = tk.Button(janela_aes, text="Cifrar", command=cifrar_texto_aes)
-botao_cifrar_aes.pack()
+# Decifra a palavra
+palavra_decifrada = fernet_decifrar(palavra_cifrada, chave)
 
-texto_cifrado_entry = tk.Entry(janela_aes)
-texto_cifrado_entry.pack()
-
-label_resultado_aes = tk.Label(janela_aes, text="")
-label_resultado_aes.pack()
-
-janela_aes.mainloop()
+# Exibe os resultados da decifragem
+print(f"Palavra Decifrada (Bytes): {palavra_decifrada}")
+print(f"Palavra Decifrada (UTF-8): {palavra_decifrada.decode('utf-8')}")
