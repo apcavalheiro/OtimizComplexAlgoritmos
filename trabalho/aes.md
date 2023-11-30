@@ -1,39 +1,71 @@
-# Cifragem e Decifragem usando AES em Python
+# AES - Criptografia e Descriptografia
 
-Este é um exemplo simples de um script Python que usa a biblioteca `cryptography` para cifrar e decifrar mensagens usando o algoritmo AES.
+Este é um exemplo simples de implementação do algoritmo AES (Advanced Encryption Standard) em Python. O código permite criptografar e descriptografar mensagens usando o AES.
 
-## Instalação
+## Pré-requisitos
 
-Antes de executar o script, certifique-se de ter a biblioteca `cryptography` instalada. Você pode instalá-la usando o seguinte comando:
+Certifique-se de ter o Python instalado em sua máquina. Além disso, instale a biblioteca `cryptography`:
 
 ```bash
 pip install cryptography
 ```
 
-## Por que Utilizar uma Biblioteca?
+## Como Executar
 
-A implementação direta do algoritmo AES pode ser complexa e propensa a erros. O uso de uma biblioteca como `cryptography` oferece várias vantagens:
-
-1. **Segurança**: Bibliotecas amplamente utilizadas, como `cryptography`, são mantidas e atualizadas por especialistas em segurança para garantir robustez e correção.
-2. **Desempenho**: Implementações otimizadas em bibliotecas podem oferecer melhor desempenho do que implementações feitas do zero em Python puro.
-3. **Padrões e Melhores Práticas**: Bibliotecas seguem padrões e melhores práticas estabelecidos, reduzindo a probabilidade de erros e vulnerabilidades.
-4. **Facilidade de Uso**: Bibliotecas fornecem interfaces de alto nível que simplificam a implementação e utilização dos algoritmos criptográficos.
-
-## Execução
-
-Execute o script `aes.py` para cifrar e decifrar usando o algoritmo AES.
+1. Clone o repositório:
 
 ```bash
-python aes.py
+git clone https://github.com/apcavalheiro/OtimizComplexAlgoritmos.git
+cd OtimizComplexAlgoritmos/trabalho/
+
 ```
 
-O script gerará uma chave AES de 16 bytes (128 bits), cifrará a palavra original "Admin" e, em seguida, decifrará a palavra cifrada, exibindo os resultados na console.
+2. Execute o script `aes.py` com argumentos da linha de comando:
 
-## Estrutura do Projeto
+```bash
+python aes.py criptografar "Mensagem a ser criptografada" "chave-secreta"
+```
 
-- `aes.py`: Script para cifrar e decifrar usando o algoritmo AES.
+Substitua `"Mensagem a ser criptografada"` pela mensagem que você deseja criptografar e `"chave-secreta"` pela sua chave secreta.
 
-## Notas Adicionais
+Para descriptografar:
 
-- Certifique-se de manter as chaves seguras, pois elas são necessárias para decifrar os dados cifrados.
-- Este é um exemplo educativo e não deve ser usado como implementação de segurança em produção.
+```bash
+python aes.py descriptografar "ciphertext-hexadecimal" "chave-secreta"
+```
+
+Substitua `"ciphertext-hexadecimal"` pelo texto criptografado em hexadecimal e `"chave-secreta"` pela mesma chave usada para criptografar.
+
+**Nota:** A chave deve ter 16, 24 ou 32 caracteres.
+
+## Exemplo
+
+### Criptografar
+
+```bash
+python aes.py criptografar "Hello, AES!" "mysecretpassword"
+```
+
+Saída:
+
+```
+Mensagem Criptografada: 2e5a7c46d22c55e74086463d6221b12e
+```
+
+### Descriptografar
+
+```bash
+python aes.py descriptografar "2e5a7c46d22c55e74086463d6221b12e" "mysecretpassword"
+```
+
+Saída:
+
+```
+Mensagem Descriptografada: Hello, AES!
+```
+
+## Observações
+
+- Este é um exemplo educacional. Em ambientes de produção, use bibliotecas de criptografia robustas e siga as melhores práticas de segurança.
+- A saída da mensagem criptografada é fornecida em formato hexadecimal para facilitar a visualização.
+- Mantenha suas chaves seguras e não as compartilhe de maneira inadequada.

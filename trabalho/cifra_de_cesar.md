@@ -1,74 +1,60 @@
-# Cifra de César em Python
+# Cifra de César - Codificação e Decodificação
 
-Este é um simples implementação em Python da Cifra de César, um algoritmo de criptografia clássico.
+Este é um exemplo simples de implementação da Cifra de César em Python. O código permite codificar e decodificar mensagens usando a Cifra de César.
 
-## Funcionalidades
+## Como Executar
 
-- Cifrar uma mensagem usando a Cifra de César.
-- Decifrar uma mensagem usando a Cifra de César.
+1. Clone o repositório:
 
-## Como usar
-
-1. Navegue até o diretório do projeto:
-
-    ```bash
-    cd cifra-de-cesar-python
-    ```
-
-2. Execute o script Python:
-
-    ```bash
-    python cifra_cesar.py
-    ```
-
-3. Siga as instruções para inserir a palavra a ser cifrada, a chave de cifra e escolher entre cifrar ou decifrar.
-
-# Cifra de César
-
-Este é um simples exemplo de uma função Python que implementa a Cifra de César para cifrar e decifrar mensagens.
-
-## Função `cifra_cesar`
-
-A função `cifra_cesar` realiza a cifragem ou decifragem de um texto usando o algoritmo de Cifra de César.
-
-### Parâmetros:
-
-- `texto (str)`: O texto a ser cifrado ou decifrado.
-- `chave (int)`: A chave de cifra, determinando o número de posições a serem deslocadas.
-- `modo (str)`: 'cifrar' para cifrar o texto, 'decifrar' para decifrar o texto.
-
-### Retorno:
-
-- `str`: O texto cifrado ou decifrado.
-
-## Exemplo de Uso
-
-```python
-# Importa a função
-from cifra_cesar import cifra_cesar
-
-# Palavra a ser cifrada
-palavra_original = "Admin"
-
-# Chave de cifra (por exemplo, 3)
-chave = 3
-
-# Cifra a palavra
-palavra_cifrada = cifra_cesar(palavra_original, chave, modo='cifrar')
-
-# Exibe os resultados
-print(f"Palavra Original: {palavra_original}")
-print(f"Chave de Cifra: {chave}")
-print(f"Palavra Cifrada: {palavra_cifrada}")
-
-# Decifra a palavra
-palavra_decifrada = cifra_cesar(palavra_cifrada, chave, modo='decifrar')
-
-# Exibe os resultados da decifragem
-print(f"Palavra Decifrada: {palavra_decifrada}")
+```bash
+git clone https://github.com/apcavalheiro/OtimizComplexAlgoritmos.git
+cd OtimizComplexAlgoritmos/trabalho/
 ```
 
-## Notas Adicionais
+2. Execute o script `cifra_de_cesar.py` com argumentos da linha de comando:
 
-- A Cifra de César é um método de criptografia simples que desloca as letras do alfabeto por um número fixo de posições.
-- Este é um exemplo educativo e não deve ser usado como implementação de segurança em produção.
+```bash
+python cifra_de_cesar.py codificar "Mensagem a ser codificada" 3
+```
+
+Substitua `"Mensagem a ser codificada"` pela mensagem que você deseja codificar e `3` pelo número de posições de deslocamento na cifra.
+
+Para decodificar:
+
+```bash
+python cifra_de_cesar.py decodificar "Texto-codificado" 3
+```
+
+Substitua `"Texto-codificado"` pelo texto codificado e `3` pelo mesmo número de posições usado para codificar.
+
+## Exemplo
+
+### Codificar
+
+```bash
+python cifra_de_cesar.py codificar "Hello, Caesar!" 3
+```
+
+Saída:
+
+```
+Mensagem Codificada: Khoor, Fdhvd!
+```
+
+### Decodificar
+
+```bash
+python cifra_de_cesar.py decodificar "Khoor, Fdhvd!" 3
+```
+
+Saída:
+
+```
+Mensagem Decodificada: Hello, Caesar!
+```
+
+## Observações
+
+- Este é um exemplo educacional da Cifra de César. Não é adequado para fins de segurança real.
+- Mantenha a chave (número de deslocamento) em segredo para garantir a segurança da cifra.
+- Este código trata apenas letras do alfabeto e não afeta caracteres não alfabéticos.
