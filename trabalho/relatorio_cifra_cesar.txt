@@ -1,0 +1,23 @@
+Relatório de Avaliação da Cifra de César
+
+Chave: 3
+Tamanho da Mensagem | Tempo de Codificação (s) | Tempo de Decodificação (s)
+------------------------------------------------------------
+        1000                   0.000399                     0.000199          
+        5000                   0.001396                     0.001846          
+       10000                   0.003191                     0.003092          
+
+Chave: 5
+Tamanho da Mensagem | Tempo de Codificação (s) | Tempo de Decodificação (s)
+------------------------------------------------------------
+        1000                   0.000299                     0.000299          
+        5000                   0.001746                     0.001496          
+       10000                   0.002992                     0.003391          
+
+Chave: 7
+Tamanho da Mensagem | Tempo de Codificação (s) | Tempo de Decodificação (s)
+------------------------------------------------------------
+        1000                   0.000299                     0.000299          
+        5000                   0.001695                     0.001647          
+       10000                   0.003391                     0.003291          
+

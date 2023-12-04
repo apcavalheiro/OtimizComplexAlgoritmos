@@ -69,3 +69,34 @@ Mensagem Descriptografada: Hello, AES!
 - Este é um exemplo educacional. Em ambientes de produção, use bibliotecas de criptografia robustas e siga as melhores práticas de segurança.
 - A saída da mensagem criptografada é fornecida em formato hexadecimal para facilitar a visualização.
 - Mantenha suas chaves seguras e não as compartilhe de maneira inadequada.
+
+
+# Avaliação de Desempenho do AES
+
+Este script em Python avalia o desempenho do algoritmo de criptografia AES (Advanced Encryption Standard) em diferentes tamanhos de mensagem e chaves.
+
+## Requisitos
+
+Certifique-se de ter as bibliotecas necessárias instaladas antes de executar o script. Você pode instalá-las usando o seguinte comando:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Uso
+
+```bash
+python script_aes.py --tamanhos_mensagem 100 500 1000 --chaves_aes chaveAES128 chaveAES192 chaveAES256 --salvar
+```
+
+### Argumentos
+
+- `--tamanhos_mensagem`: Lista de tamanhos de mensagem para avaliação.
+- `--chaves_aes`: Lista de chaves AES para avaliação.
+- `--salvar`: Flag opcional para salvar o gráfico e o relatório em vez de exibi-los.
+
+## Resultados
+
+O script gera um gráfico que mostra o desempenho do AES em termos de tempo de criptografia e descriptografia para cada tamanho de mensagem e chave. Além disso, um relatório em formato TXT é gerado com os resultados detalhados.
+
+Se a opção `--salvar` for fornecida, os arquivos de gráfico e relatório serão salvos no diretório de execução.
